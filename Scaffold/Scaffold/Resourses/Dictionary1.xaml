@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="1">Арбуз</v:String>
+    <v:String x:Key="2">Борис</v:String>
+    <v:String x:Key="3">Вагон</v:String>
+    <v:String x:Key="4">Голос</v:String>
+    <v:String x:Key="5">Доширак</v:String>
+    <v:String x:Key="6">Цыплёнок</v:String>
+    <v:String x:Key="7">Квадрат</v:String>
+    <v:String x:Key="8">Почва</v:String>
+    <v:String x:Key="9">Русский</v:String>
+</ResourceDictionary>

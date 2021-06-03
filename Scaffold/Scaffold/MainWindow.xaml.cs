@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime;
+using System.Threading;
+using System.Numerics;
 
 namespace Scaffold
 {
@@ -23,6 +26,17 @@ namespace Scaffold
         public MainWindow()
         {
             InitializeComponent();
+
+            RandomWord();
         }
+
+        public void RandomWord()
+        {
+            Random r = new Random();
+            int random = r.Next(1, 9);
+            TextBox.Text = (string)Application.Current.FindResource(Convert.ToString(random));
+        }
+
+
     }
 }
