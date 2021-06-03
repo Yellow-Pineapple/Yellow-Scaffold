@@ -9,5 +9,5 @@
 Орлов Александр - Program manager/Release manager.<br>
 Черкасов Николай - Developer.</p>
 
-<p>[Наш Trello](https://trello.com/yellowscaffold)</p>
-<p>[Прототип интерфейса](https://drive.google.com/file/d/1lqRjrSUyEARpI4iGWxU4a9wa4tLSQlNw/view)</p>
+[Наш Trello](https://trello.com/yellowscaffold)</p>
+[Прототип интерфейса](https://drive.google.com/file/d/1lqRjrSUyEARpI4iGWxU4a9wa4tLSQlNw/view)</p>
