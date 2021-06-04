@@ -53,9 +53,15 @@ namespace Scaffold
             char key = symb[0];
             if (word.Contains(key, StringComparison.InvariantCultureIgnoreCase))
             {
-                int n = word.IndexOf(key, StringComparison.InvariantCultureIgnoreCase);
-                string TextBoxText = TextBox.Text;
-                TextBox.Text = ReplaceCharInString(TextBoxText, n, key);
+                int p = -2;
+                while (p != -1)
+                {
+                    if (p == -2) p++;
+                    if (p != word.Length) p = word.IndexOf(key.ToString(), p + 1, StringComparison.InvariantCultureIgnoreCase);
+                    string TextBoxText = TextBox.Text;
+                    if (p != -1)
+                        TextBox.Text = ReplaceCharInString(TextBoxText, p, key);
+                }
             }
         }
     }
