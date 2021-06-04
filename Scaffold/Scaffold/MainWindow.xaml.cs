@@ -23,6 +23,9 @@ namespace Scaffold
     /// </summary>
     public partial class MainWindow : Window
     {
+        string key;
+        string word;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,9 +37,26 @@ namespace Scaffold
         {
             Random r = new Random();
             int random = r.Next(1, 9);
-            TextBox.Text = (string)Application.Current.FindResource(Convert.ToString(random));
+            word = (string)Application.Current.FindResource(Convert.ToString(random));
+            TextBox.Text = new string('*', word.Length);
         }
 
+        public string ReplaceCharInString(string str, int index, char newSymb)
+        {
+            return str.Remove(index, 1).Insert(index, newSymb.ToString());
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            string symb = (string)btn.Content;
+            char key = symb[0];
+            if (word.Contains(key, StringComparison.InvariantCultureIgnoreCase))
+            {
+                int n = word.IndexOf(key, StringComparison.InvariantCultureIgnoreCase);
+                string TextBoxText = TextBox.Text;
+                TextBox.Text = ReplaceCharInString(TextBoxText, n, key);
+            }
+        }
     }
 }
