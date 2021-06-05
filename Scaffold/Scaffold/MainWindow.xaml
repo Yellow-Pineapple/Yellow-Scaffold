@@ -5,41 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Scaffold"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBlock x:Name="TextBox" HorizontalAlignment="Center" Margin="0,151,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="542" Height="66" FontSize="48" TextAlignment="Center"/>
-        <Button Content="А" HorizontalAlignment="Left" Margin="157,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Б" HorizontalAlignment="Left" Margin="299,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="В" HorizontalAlignment="Left" Margin="119,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Г" HorizontalAlignment="Left" Margin="263,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Д" HorizontalAlignment="Left" Margin="335,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Е" HorizontalAlignment="Left" Margin="193,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ё" HorizontalAlignment="Left" Margin="17,282,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ж" HorizontalAlignment="Left" Margin="371,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="З" HorizontalAlignment="Left" Margin="371,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="И" HorizontalAlignment="Left" Margin="193,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Й" HorizontalAlignment="Left" Margin="49,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="К" HorizontalAlignment="Left" Margin="157,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Л" HorizontalAlignment="Left" Margin="299,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="М" HorizontalAlignment="Left" Margin="157,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Н" HorizontalAlignment="Left" Margin="228,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="О" HorizontalAlignment="Left" Margin="263,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="П" HorizontalAlignment="Left" Margin="193,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Р" HorizontalAlignment="Left" Margin="228,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="С" HorizontalAlignment="Left" Margin="119,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Т" HorizontalAlignment="Left" Margin="228,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="У" HorizontalAlignment="Left" Margin="119,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ф" HorizontalAlignment="Left" Margin="49,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Х" HorizontalAlignment="Left" Margin="400,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ц" HorizontalAlignment="Left" Margin="83,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ч" HorizontalAlignment="Left" Margin="83,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ш" HorizontalAlignment="Left" Margin="299,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Щ" HorizontalAlignment="Left" Margin="335,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ъ" HorizontalAlignment="Left" Margin="427,308,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ы" HorizontalAlignment="Left" Margin="83,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ь" HorizontalAlignment="Left" Margin="263,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Э" HorizontalAlignment="Left" Margin="400,342,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Ю" HorizontalAlignment="Left" Margin="335,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
-        <Button Content="Я" HorizontalAlignment="Left" Margin="49,372,0,0" VerticalAlignment="Top" Click="Button_Click" Width="22"/>
+        Title="Виселица" Height="450" Width="800" Icon="/icon.png" ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.5,0.462" OpacityMask="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="373*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1114.jpg" TileMode="None" Opacity="0.303"/>
+        </Grid.Background>
+        <TextBlock x:Name="TextBox" HorizontalAlignment="Left" Margin="75,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="542" Height="66" FontSize="48" TextAlignment="Center" Grid.Column="1"/>
+        <Button Content="А" HorizontalAlignment="Left" Margin="243,180,0,0" VerticalAlignment="Top" Click="Button_Click1_1" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Б" HorizontalAlignment="Left" Margin="288,180,0,0" VerticalAlignment="Top" Click="Button_Click1_2" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="В" HorizontalAlignment="Left" Margin="333,180,0,0" VerticalAlignment="Top" Click="Button_Click1_3" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Г" HorizontalAlignment="Left" Margin="378,180,0,0" VerticalAlignment="Top" Click="Button_Click1_4" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Д" HorizontalAlignment="Left" Margin="423,180,0,0" VerticalAlignment="Top" Click="Button_Click1_5" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Е" HorizontalAlignment="Left" Margin="468,180,0,0" VerticalAlignment="Top" Click="Button_Click1_6" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ё" HorizontalAlignment="Left" Margin="513,180,0,0" VerticalAlignment="Top" Click="Button_Click1_7" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ж" HorizontalAlignment="Left" Margin="558,180,0,0" VerticalAlignment="Top" Click="Button_Click1_8" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="З" HorizontalAlignment="Left" Margin="603,180,0,0" VerticalAlignment="Top" Click="Button_Click1_9" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="И" HorizontalAlignment="Left" Margin="648,180,0,0" VerticalAlignment="Top" Click="Button_Click1_10" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Й" HorizontalAlignment="Left" Margin="693,180,0,0" VerticalAlignment="Top" Click="Button_Click1_11" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="К" HorizontalAlignment="Left" Margin="243,227,0,0" VerticalAlignment="Top" Click="Button_Click2_1" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Л" HorizontalAlignment="Left" Margin="288,227,0,0" VerticalAlignment="Top" Click="Button_Click2_2" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="М" HorizontalAlignment="Left" Margin="333,227,0,0" VerticalAlignment="Top" Click="Button_Click2_3" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Н" HorizontalAlignment="Left" Margin="378,227,0,0" VerticalAlignment="Top" Click="Button_Click2_4" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="О" HorizontalAlignment="Left" Margin="423,227,0,0" VerticalAlignment="Top" Click="Button_Click2_5" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="П" HorizontalAlignment="Left" Margin="468,227,0,0" VerticalAlignment="Top" Click="Button_Click2_6" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Р" HorizontalAlignment="Left" Margin="513,227,0,0" VerticalAlignment="Top" Click="Button_Click2_7" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="С" HorizontalAlignment="Left" Margin="558,227,0,0" VerticalAlignment="Top" Click="Button_Click2_8" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Т" HorizontalAlignment="Left" Margin="603,227,0,0" VerticalAlignment="Top" Click="Button_Click2_9" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="У" HorizontalAlignment="Left" Margin="648,227,0,0" VerticalAlignment="Top" Click="Button_Click2_10" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ф" HorizontalAlignment="Left" Margin="693,227,0,0" VerticalAlignment="Top" Click="Button_Click2_11" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Х" HorizontalAlignment="Left" Margin="243,274,0,0" VerticalAlignment="Top" Click="Button_Click3_1" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ц" HorizontalAlignment="Left" Margin="288,274,0,0" VerticalAlignment="Top" Click="Button_Click3_2" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ч" HorizontalAlignment="Left" Margin="333,274,0,0" VerticalAlignment="Top" Click="Button_Click3_3" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ш" HorizontalAlignment="Left" Margin="378,274,0,0" VerticalAlignment="Top" Click="Button_Click3_4" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Щ" HorizontalAlignment="Left" Margin="423,274,0,0" VerticalAlignment="Top" Click="Button_Click3_5" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ъ" HorizontalAlignment="Left" Margin="468,274,0,0" VerticalAlignment="Top" Click="Button_Click3_6" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ы" HorizontalAlignment="Left" Margin="513,274,0,0" VerticalAlignment="Top" Click="Button_Click3_7" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ь" HorizontalAlignment="Left" Margin="558,274,0,0" VerticalAlignment="Top" Click="Button_Click3_8" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Э" HorizontalAlignment="Left" Margin="603,274,0,0" VerticalAlignment="Top" Click="Button_Click3_9" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Ю" HorizontalAlignment="Left" Margin="648,274,0,0" VerticalAlignment="Top" Click="Button_Click3_10" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Button Content="Я" HorizontalAlignment="Left" Margin="693,274,0,0" VerticalAlignment="Top" Click="Button_Click3_11" Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1"/>
+        <Image x:Name="yes11" HorizontalAlignment="Left" Height="50" Margin="233,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="no11" HorizontalAlignment="Left" Height="40" Margin="238,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="yes12" HorizontalAlignment="Left" Height="50" Margin="278,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="no12" HorizontalAlignment="Left" Height="40" Margin="283,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="vis1" HorizontalAlignment="Left" Height="26" Margin="47,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="vis2" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1"/>
+        <Image x:Name="vis3" HorizontalAlignment="Left" Height="28" Margin="25,148,0,0" VerticalAlignment="Top" Width="148" Source="/vis3.png" Grid.Column="1" Stretch="Uniform" ScrollViewer.VerticalScrollBarVisibility="Visible" Visibility="Visible"/>
+        <Image x:Name="vis4" HorizontalAlignment="Left" Height="51" Margin="130,169,0,0" VerticalAlignment="Top" Width="51" Source="/vis4.png" Grid.Column="1"/>
+        <Image x:Name="vis5" HorizontalAlignment="Left" Height="42" Margin="151,214,0,0" VerticalAlignment="Top" Width="13" Source="/vis5.png" Grid.Column="1"/>
+        <Image x:Name="vis6" HorizontalAlignment="Left" Height="33" Margin="121,220,0,0" VerticalAlignment="Top" Width="33" Source="/vis6.png" Grid.Column="1"/>
+        <Image x:Name="vis7" HorizontalAlignment="Left" Height="21" Margin="156,218,0,0" VerticalAlignment="Top" Width="36" Source="/vis7.png" Grid.Column="1" Stretch="Uniform"/>
+        <Image x:Name="vis8" HorizontalAlignment="Left" Height="47" Margin="127,252,0,0" VerticalAlignment="Top" Width="31" Source="/vis8.png" Grid.Column="1" Stretch="Uniform"/>
+        <Image x:Name="vis10" HorizontalAlignment="Left" Height="46" Margin="154,252,0,0" VerticalAlignment="Top" Width="24" Source="/vis10.png" Grid.Column="1"/>
+        <Image x:Name="vis11" HorizontalAlignment="Left" Height="27" Margin="141,180,0,0" VerticalAlignment="Top" Width="26" Source="/vis11.png" Grid.Column="1"/>
+        <Image x:Name="yes13" HorizontalAlignment="Left" Height="50" Margin="323,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes14" HorizontalAlignment="Left" Height="50" Margin="368,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes15" HorizontalAlignment="Left" Height="50" Margin="412,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes16" HorizontalAlignment="Left" Height="50" Margin="457,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes17" HorizontalAlignment="Left" Height="50" Margin="502,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes18" HorizontalAlignment="Left" Height="50" Margin="547,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes19" HorizontalAlignment="Left" Height="50" Margin="593,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes110" HorizontalAlignment="Left" Height="50" Margin="637,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes111" HorizontalAlignment="Left" Height="50" Margin="682,173,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes21" HorizontalAlignment="Left" Height="50" Margin="233,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes22" HorizontalAlignment="Left" Height="50" Margin="278,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes23" HorizontalAlignment="Left" Height="50" Margin="323,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes24" HorizontalAlignment="Left" Height="50" Margin="368,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes25" HorizontalAlignment="Left" Height="50" Margin="413,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes26" HorizontalAlignment="Left" Height="50" Margin="458,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes27" HorizontalAlignment="Left" Height="50" Margin="503,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes28" HorizontalAlignment="Left" Height="50" Margin="548,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes29" HorizontalAlignment="Left" Height="50" Margin="593,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes210" HorizontalAlignment="Left" Height="50" Margin="638,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes211" HorizontalAlignment="Left" Height="50" Margin="682,220,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes31" HorizontalAlignment="Left" Height="50" Margin="233,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes32" HorizontalAlignment="Left" Height="50" Margin="278,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes33" HorizontalAlignment="Left" Height="50" Margin="323,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes34" HorizontalAlignment="Left" Height="50" Margin="368,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes35" HorizontalAlignment="Left" Height="50" Margin="412,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes36" HorizontalAlignment="Left" Height="50" Margin="458,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes37" HorizontalAlignment="Left" Height="50" Margin="503,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes38" HorizontalAlignment="Left" Height="50" Margin="547,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes39" HorizontalAlignment="Left" Height="50" Margin="593,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes310" HorizontalAlignment="Left" Height="50" Margin="638,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="yes311" HorizontalAlignment="Left" Height="50" Margin="682,267,0,0" VerticalAlignment="Top" Width="50" Source="/1112.png" Grid.Column="1"/>
+        <Image x:Name="no13" HorizontalAlignment="Left" Height="40" Margin="328,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no14" HorizontalAlignment="Left" Height="40" Margin="373,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no15" HorizontalAlignment="Left" Height="40" Margin="418,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no16" HorizontalAlignment="Left" Height="40" Margin="463,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no17" HorizontalAlignment="Left" Height="40" Margin="507,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no18" HorizontalAlignment="Left" Height="40" Margin="553,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no19" HorizontalAlignment="Left" Height="40" Margin="598,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no110" HorizontalAlignment="Left" Height="40" Margin="643,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no111" HorizontalAlignment="Left" Height="40" Margin="687,178,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no21" HorizontalAlignment="Left" Height="40" Margin="240,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no22" HorizontalAlignment="Left" Height="40" Margin="283,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no23" HorizontalAlignment="Left" Height="40" Margin="328,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no24" HorizontalAlignment="Left" Height="40" Margin="373,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no25" HorizontalAlignment="Left" Height="40" Margin="418,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no26" HorizontalAlignment="Left" Height="40" Margin="463,226,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no27" HorizontalAlignment="Left" Height="40" Margin="508,227,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no28" HorizontalAlignment="Left" Height="40" Margin="553,225,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no29" HorizontalAlignment="Left" Height="40" Margin="598,225,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no210" HorizontalAlignment="Left" Height="40" Margin="643,225,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no211" HorizontalAlignment="Left" Height="40" Margin="688,225,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no31" HorizontalAlignment="Left" Height="40" Margin="238,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no32" HorizontalAlignment="Left" Height="40" Margin="283,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no33" HorizontalAlignment="Left" Height="40" Margin="328,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no34" HorizontalAlignment="Left" Height="40" Margin="373,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no35" HorizontalAlignment="Left" Height="40" Margin="418,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no36" HorizontalAlignment="Left" Height="40" Margin="465,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no37" HorizontalAlignment="Left" Height="40" Margin="508,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no38" HorizontalAlignment="Left" Height="40" Margin="552,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no39" HorizontalAlignment="Left" Height="40" Margin="598,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no310" HorizontalAlignment="Left" Height="40" Margin="643,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Image x:Name="no311" HorizontalAlignment="Left" Height="40" Margin="688,272,0,0" VerticalAlignment="Top" Width="38" Source="/1113.png" Grid.Column="1"/>
+        <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
+        <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36" Click="Restart"/>
     </Grid>
 </Window>
