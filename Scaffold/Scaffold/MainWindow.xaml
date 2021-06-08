@@ -44,18 +44,21 @@
         <Button Content="Э" HorizontalAlignment="Left" Margin="560,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
         <Button Content="Ю" HorizontalAlignment="Left" Margin="600,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
         <Button Content="Я" HorizontalAlignment="Left" Margin="640,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Image x:Name="vis1" HorizontalAlignment="Left" Height="26" Margin="23,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.Column="1"/>
-        <Image x:Name="vis2" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1"/>
-        <Image x:Name="vis3" HorizontalAlignment="Left" Height="28" Margin="25,148,0,0" VerticalAlignment="Top" Width="148" Source="/vis3.png" Grid.Column="1" Stretch="Uniform" ScrollViewer.VerticalScrollBarVisibility="Visible" Visibility="Visible"/>
-        <Image x:Name="vis4" HorizontalAlignment="Left" Height="51" Margin="130,169,0,0" VerticalAlignment="Top" Width="51" Source="/vis4.png" Grid.Column="1"/>
-        <Image x:Name="vis5" HorizontalAlignment="Left" Height="42" Margin="151,214,0,0" VerticalAlignment="Top" Width="13" Source="/vis5.png" Grid.Column="1"/>
-        <Image x:Name="vis6" HorizontalAlignment="Left" Height="33" Margin="121,220,0,0" VerticalAlignment="Top" Width="33" Source="/vis6.png" Grid.Column="1"/>
-        <Image x:Name="vis7" HorizontalAlignment="Left" Height="21" Margin="156,218,0,0" VerticalAlignment="Top" Width="36" Source="/vis7.png" Grid.Column="1" Stretch="Uniform"/>
-        <Image x:Name="vis8" HorizontalAlignment="Left" Height="47" Margin="127,252,0,0" VerticalAlignment="Top" Width="31" Source="/vis8.png" Grid.Column="1" Stretch="Uniform"/>
-        <Image x:Name="vis10" HorizontalAlignment="Left" Height="46" Margin="154,252,0,0" VerticalAlignment="Top" Width="24" Source="/vis10.png" Grid.Column="1"/>
-        <Image x:Name="vis11" HorizontalAlignment="Left" Height="27" Margin="141,180,0,0" VerticalAlignment="Top" Width="26" Source="/vis11.png" Grid.Column="1"/>
+        
         <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
         <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36" Click="Restart"/>
+        <Canvas x:Name="canvas_vis" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Image x:Name="vis0" HorizontalAlignment="Left" Height="26" Margin="23,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis1" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis2" HorizontalAlignment="Left" Height="28" Margin="25,148,0,0" VerticalAlignment="Top" Width="148" Source="/vis3.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis3" HorizontalAlignment="Left" Height="51" Margin="130,169,0,0" VerticalAlignment="Top" Width="51" Source="/vis4.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis4" HorizontalAlignment="Left" Height="42" Margin="151,214,0,0" VerticalAlignment="Top" Width="13" Source="/vis5.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis5" HorizontalAlignment="Left" Height="33" Margin="121,220,0,0" VerticalAlignment="Top" Width="33" Source="/vis6.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis6" HorizontalAlignment="Left" Height="21" Margin="156,218,0,0" VerticalAlignment="Top" Width="36" Source="/vis7.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis7" HorizontalAlignment="Left" Height="47" Margin="127,252,0,0" VerticalAlignment="Top" Width="31" Source="/vis8.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis8" HorizontalAlignment="Left" Height="46" Margin="154,252,0,0" VerticalAlignment="Top" Width="24" Source="/vis10.png" Grid.Column="1" Visibility="Hidden"/>
+            <Image x:Name="vis9" HorizontalAlignment="Left" Height="27" Margin="141,180,0,0" VerticalAlignment="Top" Width="26" Source="/vis11.png" Grid.Column="1" Visibility="Hidden"/>
+        </Canvas>
         <Canvas x:Name="canvas" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Window>

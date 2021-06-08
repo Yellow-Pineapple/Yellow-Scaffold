@@ -23,14 +23,13 @@ namespace Scaffold
     /// </summary>
     public partial class MainWindow : Window
     {
-        int vis = 0;
         string word;
-
+        int vis;
         public MainWindow()
         {
             InitializeComponent();
             RandomWord();
-            Show_vis();
+
         }
 
         public void RandomWord()
@@ -41,51 +40,30 @@ namespace Scaffold
             TextBox.Text = new string('*', word.Length);
         }
 
+        public void Scaff_Imgs_Appear(int number)
+        {
+            foreach (Image img in canvas_vis.Children)
+            {
+                if (img.Name.Contains(Convert.ToString(number)))
+                {
+                    img.Visibility = Visibility.Visible;
+                }
+            }         
+        }
+
+        public void Scaff_Imgs_Disappear()
+        {
+            foreach (Image img in canvas_vis.Children)
+            {
+                img.Visibility = Visibility.Hidden;
+            }
+        }
+
         public string ReplaceCharInString(string str, int index, char newSymb)
         {
             return str.Remove(index, 1).Insert(index, newSymb.ToString());
         }
-        public void Show_vis()  // Показ или скрытие элементов виселицы
-        {
-            switch (vis)
-            {
-                case 1:
-                    vis1.Visibility = Visibility.Visible; break;                    
-                case 2:
-                    vis2.Visibility = Visibility.Visible; break;
-                case 3:
-                    vis3.Visibility = Visibility.Visible; break;
-                case 4:
-                    vis4.Visibility = Visibility.Visible; break;
-                case 5:
-                    vis5.Visibility = Visibility.Visible; break;
-                case 6:
-                    vis6.Visibility = Visibility.Visible; break;
-                case 7:
-                    vis7.Visibility = Visibility.Visible; break;
-                case 8:
-                    vis8.Visibility = Visibility.Visible; break;
-                case 9:
-                    vis10.Visibility = Visibility.Visible;
-                    vis11.Visibility = Visibility.Visible;
-
-                    break;
-                default: 
-                    vis1.Visibility = Visibility.Hidden;
-                    vis2.Visibility = Visibility.Hidden;
-                    vis3.Visibility = Visibility.Hidden;
-                    vis4.Visibility = Visibility.Hidden;
-                    vis5.Visibility = Visibility.Hidden;
-                    vis6.Visibility = Visibility.Hidden;
-                    vis7.Visibility = Visibility.Hidden;
-                    vis8.Visibility = Visibility.Hidden;
-                    vis10.Visibility = Visibility.Hidden;
-                    vis11.Visibility = Visibility.Hidden;
-                    break; 
-            }
-            vis++;
-        }
-        
+       
         public bool Check_letter(char key)  // Проверка буквы в слове
         {
             bool flag = false;
@@ -105,7 +83,8 @@ namespace Scaffold
             }
             else
             {
-                Show_vis();
+                Scaff_Imgs_Appear(vis);
+                vis++;
             }
             return flag;
         }
@@ -139,7 +118,7 @@ namespace Scaffold
         {
             vis = 0;
             RandomWord();
-            Show_vis();
+            Scaff_Imgs_Disappear();
             var images = canvas.Children.OfType<Image>().ToList();
             foreach (var image in images)
             {
