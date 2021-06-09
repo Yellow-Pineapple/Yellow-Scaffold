@@ -48,7 +48,7 @@ namespace Scaffold
                 {
                     img.Visibility = Visibility.Visible;
                 }
-            }         
+            }
         }
 
         public void Scaff_Imgs_Disappear()
@@ -112,9 +112,16 @@ namespace Scaffold
                 img.Source = new BitmapImage(new Uri("/1113.png", UriKind.Relative));
             }
             canvas.Children.Add(img);
+            if (vis == 10)
+            {
+                MessageBoxResult messageDialog = MessageBox.Show("Game Over!\nWant to play some more?", ":(", MessageBoxButton.YesNo);
+                if (messageDialog == MessageBoxResult.No)
+                    Environment.Exit(0);
+                if (messageDialog == MessageBoxResult.Yes)
+                    Res_1();
+            }
         }
-        
-        private void Restart(object sender, RoutedEventArgs e)
+        public void Res_1()
         {
             vis = 0;
             RandomWord();
@@ -124,6 +131,10 @@ namespace Scaffold
             {
                 canvas.Children.Remove(image);
             }
+        }
+        private void Restart(object sender, RoutedEventArgs e)
+        {
+            Res_1();
         }
 
         private void Settings(object sender, RoutedEventArgs e)
