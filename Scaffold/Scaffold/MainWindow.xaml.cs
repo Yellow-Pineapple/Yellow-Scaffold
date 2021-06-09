@@ -118,10 +118,10 @@ namespace Scaffold
                 if (messageDialog == MessageBoxResult.No)
                     Environment.Exit(0);
                 if (messageDialog == MessageBoxResult.Yes)
-                    Res_1();
+                    Restart(sender, e);
             }
         }
-        public void Res_1()
+        private void Restart(object sender, RoutedEventArgs e)
         {
             vis = 0;
             RandomWord();
@@ -131,10 +131,6 @@ namespace Scaffold
             {
                 canvas.Children.Remove(image);
             }
-        }
-        private void Restart(object sender, RoutedEventArgs e)
-        {
-            Res_1();
         }
 
         private void Settings(object sender, RoutedEventArgs e)
