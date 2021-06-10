@@ -102,6 +102,7 @@ namespace Scaffold
         {
             Image img = new Image();
             img.Margin = ((Button)sender).Margin;
+            ((Button)sender).IsEnabled = false;
             img.Height = img.Width = 30;
             if (Transform(sender))
             {
@@ -118,7 +119,7 @@ namespace Scaffold
                 if (messageDialog == MessageBoxResult.No)
                     Environment.Exit(0);
                 if (messageDialog == MessageBoxResult.Yes)
-                    Restart(sender, e);
+                    Restart(null, null);
             }
         }
         private void Restart(object sender, RoutedEventArgs e)
