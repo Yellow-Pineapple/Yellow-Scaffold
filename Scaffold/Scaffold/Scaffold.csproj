@@ -6,4 +6,42 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="1112.png" />
+    <None Remove="1113.png" />
+    <None Remove="1114.jpg" />
+    <None Remove="gratis-png-arte-de-flecha-gris-diagrama-de-flecha-circular-redondo.png" />
+    <None Remove="icon.ico" />
+    <None Remove="icon.png" />
+    <None Remove="settings--v2.png" />
+    <None Remove="tony.png" />
+    <None Remove="vis1.png" />
+    <None Remove="vis10.png" />
+    <None Remove="vis11.png" />
+    <None Remove="vis2.png" />
+    <None Remove="vis3.png" />
+    <None Remove="vis4.png" />
+    <None Remove="vis5.png" />
+    <None Remove="vis6.png" />
+    <None Remove="vis7.png" />
+    <None Remove="vis8.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1112.png" />
+    <Resource Include="1113.png" />
+    <Resource Include="1114.jpg" />
+    <Resource Include="icon.png" />
+    <Resource Include="vis1.png" />
+    <Resource Include="vis10.png" />
+    <Resource Include="vis11.png" />
+    <Resource Include="vis2.png" />
+    <Resource Include="vis3.png" />
+    <Resource Include="vis4.png" />
+    <Resource Include="vis5.png" />
+    <Resource Include="vis6.png" />
+    <Resource Include="vis7.png" />
+    <Resource Include="vis8.png" />
+  </ItemGroup>
+
 </Project>
