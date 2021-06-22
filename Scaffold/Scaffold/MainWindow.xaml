@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Scaffold"
         mc:Ignorable="d"
         Title="Виселица" Height="450" Width="800" Icon="/icon.png" ResizeMode="NoResize">
-    <Grid  OpacityMask="Black" Margin="0,0,0,0" Height="450">
+    <Grid x:Name="MainGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
         <Grid.Background>
             <ImageBrush ImageSource="/1114.jpg" TileMode="None" Opacity="0.303"/>
         </Grid.Background>
@@ -46,7 +46,7 @@
         <Button Content="Я" HorizontalAlignment="Left" Margin="640,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
         
         <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
-        <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36" Click="Restart"/>
+        <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36"  Click="Restart"/>
         <Canvas x:Name="canvas_vis" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Image x:Name="vis0" HorizontalAlignment="Left" Height="26" Margin="23,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.Column="1" Visibility="Hidden"/>
             <Image x:Name="vis1" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1" Visibility="Hidden"/>
