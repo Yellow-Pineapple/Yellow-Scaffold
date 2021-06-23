@@ -34,6 +34,7 @@ namespace Scaffold
 
         public void RandomWord() 
         {
+
             Random r = new Random();
             int random = r.Next(1, 9);
             word = (string)Application.Current.FindResource(Convert.ToString(random));
@@ -123,7 +124,7 @@ namespace Scaffold
 
         private void Game_Over_Message()
         {
-            MessageBoxResult messageDialog = MessageBox.Show("Game Over!\nWant to play some more?", ":(", MessageBoxButton.YesNo);
+            MessageBoxResult messageDialog = MessageBox.Show("Game Over! The word was: " + word + "\nWant to play some more?", ":(", MessageBoxButton.YesNo);
             if (messageDialog == MessageBoxResult.No) Environment.Exit(0);
             if (messageDialog == MessageBoxResult.Yes) Restart(null, null);
         }
