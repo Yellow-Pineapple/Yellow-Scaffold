@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Runtime;
 using System.Threading;
 using System.Numerics;
+using System.IO;
 
 namespace Scaffold
 {
@@ -30,22 +31,78 @@ namespace Scaffold
         bool hint;
         int hint_counter;
         int[] randomarray;
+        int coin = 0;
 
         public MainWindow()
         {
             InitializeComponent();
-            RandomWord();
+            MainGrid.Visibility = Visibility.Hidden;
+            
+            In_Coin();
+            
+
+
+
         }
 
-        public void RandomWord()
+        private void RandomWord(object sender, RoutedEventArgs e)
         {
+            MainGrid.Visibility = Visibility.Hidden;
+            CategoryGrid.Visibility = Visibility.Hidden;
+            int letters_count = 1;
+            Button button = (Button)sender;
+            int k = (int)button.Name[1];
+            Random rand = new Random();
+            if (k == 0)
+            {               
+                k = rand.Next(1, 4);
+            }
 
-            Random r = new Random();
-            int random = r.Next(1, 9);
-            word = (string)Application.Current.FindResource(Convert.ToString(random));
+
+            
+
+            var myRD = new ResourceDictionary();
+            switch (k)
+            {
+                case 1:
+                    {
+                        myRD.Source = new Uri("/Resourses/Dictionary1.xaml", UriKind.RelativeOrAbsolute);
+                        letters_count = 74;
+                        break;
+                    }
+                case 2:
+                    {
+                        myRD.Source = new Uri("/Resourses/Dictionary2.xaml", UriKind.RelativeOrAbsolute);
+                        letters_count = 32;
+                        break;
+                    }
+                case 3:
+                    {
+                        myRD.Source = new Uri("/Resourses/Dictionary3.xaml", UriKind.RelativeOrAbsolute);
+                        letters_count = 36;
+                        break;
+                    }
+                case 4:
+                    {
+                        myRD.Source = new Uri("/Resourses/Dictionary4.xaml", UriKind.RelativeOrAbsolute);
+                        letters_count = 112;
+                        break;
+                    }
+            }
+
+            k = rand.Next(1, letters_count);
+
+            //word = (string)Application.Current.FindResource(Convert.ToString(random));
+            word = myRD[k.ToString()].ToString();
+
             TextBox.Text = new string('*', word.Length);
             points = 0;
             hint = true;
+
+            //Random r = new Random();
+            //int random = r.Next(1, 9);
+            //word = (string)Application.Current.FindResource(Convert.ToString(random));
+            MainGrid.Visibility = Visibility.Visible;
         }
 
         public void Scaff_Imgs_Appear(int number)
@@ -127,7 +184,12 @@ namespace Scaffold
             }
             canvas.Children.Add(img);
             if (vis == 10) Game_Over_Message();
-            if (hit == word.Length) Win_Message();
+            if (hit == word.Length)
+            {
+                coin++;
+                Out_Coin();
+                Win_Message();               
+            }
         }
 
         private void Game_Over_Message()
@@ -148,8 +210,8 @@ namespace Scaffold
         {
             vis = 0;
             hit = 0;
-            fer1.Visibility = Visibility.Hidden;
-            RandomWord();
+            RandomWord(null,null);
+            Out_Coin();
             Scaff_Imgs_Disappear();
             var images = canvas.Children.OfType<Image>().ToList();
             foreach (var image in images)
@@ -161,6 +223,8 @@ namespace Scaffold
             {
                 button.IsEnabled = true;
             }
+            MainGrid.Visibility = Visibility.Hidden;
+            CategoryGrid.Visibility = Visibility.Visible;
         }
 
         private void Settings(object sender, RoutedEventArgs e)
@@ -185,18 +249,27 @@ namespace Scaffold
 
         private void Get_Hint_Click(object sender, RoutedEventArgs e)
         {
-
-            if (hint)
+            if (coin > 4)
             {
-                randomarray = Shuffle(word.Length);
-                hint = false;
-                hint_counter = 0;
-            }
+                if (hint)
+                {
+                    randomarray = Shuffle(word.Length);
+                    hint = false;
+                    hint_counter = 0;
+                }
 
-            int Letter_Position = randomarray[hint_counter];
-            hint_counter++;
-            char Letter = word[Letter_Position];
-            Loop(Letter, Letter_Position);
+                int Letter_Position = randomarray[hint_counter];
+                hint_counter++;
+                char Letter = word[Letter_Position];
+                Loop(Letter, Letter_Position);
+
+                coin -= 5;
+                Out_Coin();
+            } 
+            else
+            {
+                MessageBox.Show("Недостаточно монет!");
+            }
         }
 
         private void Loop(char Letter, int Letter_Position)
@@ -211,6 +284,36 @@ namespace Scaffold
                     return;
                 }
             }
+        }
+        public void In_Coin()
+        {
+            StreamReader f;
+            try
+            {
+                f = new StreamReader("coin.txt");
+            }
+            catch (Exception p)
+            {
+                MessageBox.Show("Возникла непредвиденная ошибка!");
+                return;
+            }
+            coin = int.Parse(f.ReadLine());
+            f.Close();
+        }
+        public void Out_Coin()
+        {
+            StreamWriter f;
+            try
+            {
+                f = new StreamWriter("coin.txt");
+            }
+            catch (Exception p)
+            {
+                MessageBox.Show("Возникла непредвиденная ошибка!");
+                return;
+            }
+            f.WriteLine(coin);
+            f.Close();
         }
     }
 }

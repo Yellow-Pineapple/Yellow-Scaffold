@@ -6,62 +6,69 @@
         xmlns:local="clr-namespace:Scaffold"
         mc:Ignorable="d"
         Title="Виселица" Height="450" Width="800" Icon="/icon.png" ResizeMode="NoResize">
-    <Grid x:Name="MainGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
-        <Grid.Background>
-            <ImageBrush ImageSource="/1114.jpg" TileMode="None" Opacity="0.303"/>
-        </Grid.Background>
-        <TextBlock x:Name="TextBox" HorizontalAlignment="Left" Margin="75,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="542" Height="66" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="2"/>
-        <Button Name="A" Content="А" HorizontalAlignment="Left" Margin="240,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Б" HorizontalAlignment="Left" Margin="280,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="В" HorizontalAlignment="Left" Margin="320,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Г" HorizontalAlignment="Left" Margin="360,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Д" HorizontalAlignment="Left" Margin="400,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Е" HorizontalAlignment="Left" Margin="440,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Ё" HorizontalAlignment="Left" Margin="480,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic" Grid.ColumnSpan="2"/>
-        <Button Content="Ж" HorizontalAlignment="Left" Margin="520,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="З" HorizontalAlignment="Left" Margin="560,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="И" HorizontalAlignment="Left" Margin="600,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Й" HorizontalAlignment="Left" Margin="640,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="К" HorizontalAlignment="Left" Margin="240,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Л" HorizontalAlignment="Left" Margin="280,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="М" HorizontalAlignment="Left" Margin="320,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Н" HorizontalAlignment="Left" Margin="360,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="О" HorizontalAlignment="Left" Margin="400,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="П" HorizontalAlignment="Left" Margin="440,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Р" HorizontalAlignment="Left" Margin="480,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic" Grid.ColumnSpan="2"/>
-        <Button Content="С" HorizontalAlignment="Left" Margin="520,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Т" HorizontalAlignment="Left" Margin="560,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="У" HorizontalAlignment="Left" Margin="600,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Ф" HorizontalAlignment="Left" Margin="640,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Х" HorizontalAlignment="Left" Margin="240,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Ц" HorizontalAlignment="Left" Margin="280,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Ч" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Ш" HorizontalAlignment="Left" Margin="360,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Щ" HorizontalAlignment="Left" Margin="400,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
-        <Button Content="Ъ" HorizontalAlignment="Left" Margin="440,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Ы" HorizontalAlignment="Left" Margin="480,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Ь" HorizontalAlignment="Left" Margin="520,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Э" HorizontalAlignment="Left" Margin="560,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Ю" HorizontalAlignment="Left" Margin="600,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="Я" HorizontalAlignment="Left" Margin="640,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-        <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
-        <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36"  Click="Restart"/>
-        <Canvas x:Name="canvas_vis" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Image x:Name="vis0" HorizontalAlignment="Left" Height="26" Margin="23,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis1" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis2" HorizontalAlignment="Left" Height="28" Margin="25,148,0,0" VerticalAlignment="Top" Width="148" Source="/vis3.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis3" HorizontalAlignment="Left" Height="51" Margin="130,169,0,0" VerticalAlignment="Top" Width="51" Source="/vis4.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis4" HorizontalAlignment="Left" Height="42" Margin="151,214,0,0" VerticalAlignment="Top" Width="13" Source="/vis5.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis5" HorizontalAlignment="Left" Height="33" Margin="121,220,0,0" VerticalAlignment="Top" Width="33" Source="/vis6.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis6" HorizontalAlignment="Left" Height="21" Margin="156,218,0,0" VerticalAlignment="Top" Width="36" Source="/vis7.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis7" HorizontalAlignment="Left" Height="47" Margin="127,252,0,0" VerticalAlignment="Top" Width="31" Source="/vis8.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis8" HorizontalAlignment="Left" Height="46" Margin="154,252,0,0" VerticalAlignment="Top" Width="24" Source="/vis10.png" Grid.Column="1" Visibility="Hidden"/>
-            <Image x:Name="vis9" HorizontalAlignment="Left" Height="27" Margin="141,180,0,0" VerticalAlignment="Top" Width="26" Source="/vis11.png" Grid.Column="1" Visibility="Hidden"/>
-        </Canvas>
-        <Canvas x:Name="canvas" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image x:Name="fer1" Height="278" Canvas.Left="18" Canvas.Top="114" Width="278" Source="/fer1.gif" Visibility="Hidden"/>
-            <Button Content="Hint" Canvas.Left="654" Canvas.Top="97" Click="Get_Hint_Click"/>
-
-        </Canvas>
+    <Grid x:Name="MainMainGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
+        <Grid x:Name="MainGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
+            <Grid.Background>
+                <ImageBrush ImageSource="/1114.jpg" TileMode="None" Opacity="0.303"/>
+            </Grid.Background>
+            <TextBlock x:Name="TextBox" HorizontalAlignment="Left" Margin="75,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="542" Height="66" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="2"/>
+            <Button Name="A" Content="А" HorizontalAlignment="Left" Margin="240,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Б" HorizontalAlignment="Left" Margin="280,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="В" HorizontalAlignment="Left" Margin="320,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Г" HorizontalAlignment="Left" Margin="360,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Д" HorizontalAlignment="Left" Margin="400,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Е" HorizontalAlignment="Left" Margin="440,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Ё" HorizontalAlignment="Left" Margin="480,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic" Grid.ColumnSpan="2"/>
+            <Button Content="Ж" HorizontalAlignment="Left" Margin="520,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="З" HorizontalAlignment="Left" Margin="560,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="И" HorizontalAlignment="Left" Margin="600,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Й" HorizontalAlignment="Left" Margin="640,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="К" HorizontalAlignment="Left" Margin="240,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Л" HorizontalAlignment="Left" Margin="280,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="М" HorizontalAlignment="Left" Margin="320,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Н" HorizontalAlignment="Left" Margin="360,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="О" HorizontalAlignment="Left" Margin="400,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="П" HorizontalAlignment="Left" Margin="440,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Р" HorizontalAlignment="Left" Margin="480,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic" Grid.ColumnSpan="2"/>
+            <Button Content="С" HorizontalAlignment="Left" Margin="520,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Т" HorizontalAlignment="Left" Margin="560,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="У" HorizontalAlignment="Left" Margin="600,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Ф" HorizontalAlignment="Left" Margin="640,220,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Х" HorizontalAlignment="Left" Margin="240,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Ц" HorizontalAlignment="Left" Margin="280,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Ч" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Ш" HorizontalAlignment="Left" Margin="360,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Щ" HorizontalAlignment="Left" Margin="400,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+            <Button Content="Ъ" HorizontalAlignment="Left" Margin="440,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Ы" HorizontalAlignment="Left" Margin="480,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Ь" HorizontalAlignment="Left" Margin="520,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Э" HorizontalAlignment="Left" Margin="560,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Ю" HorizontalAlignment="Left" Margin="600,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="Я" HorizontalAlignment="Left" Margin="640,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
+            <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
+            <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36"  Click="Restart"/>
+            <Canvas x:Name="canvas_vis" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image x:Name="vis0" HorizontalAlignment="Left" Height="26" Margin="23,301,0,0" VerticalAlignment="Top" Width="187" Source="/vis1.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis1" HorizontalAlignment="Left" Height="166" Margin="18,143,0,0" VerticalAlignment="Top" Width="18" Source="/vis2.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis2" HorizontalAlignment="Left" Height="28" Margin="25,148,0,0" VerticalAlignment="Top" Width="148" Source="/vis3.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis3" HorizontalAlignment="Left" Height="51" Margin="130,169,0,0" VerticalAlignment="Top" Width="51" Source="/vis4.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis4" HorizontalAlignment="Left" Height="42" Margin="151,214,0,0" VerticalAlignment="Top" Width="13" Source="/vis5.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis5" HorizontalAlignment="Left" Height="33" Margin="121,220,0,0" VerticalAlignment="Top" Width="33" Source="/vis6.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis6" HorizontalAlignment="Left" Height="21" Margin="156,218,0,0" VerticalAlignment="Top" Width="36" Source="/vis7.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis7" HorizontalAlignment="Left" Height="47" Margin="127,252,0,0" VerticalAlignment="Top" Width="31" Source="/vis8.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis8" HorizontalAlignment="Left" Height="46" Margin="154,252,0,0" VerticalAlignment="Top" Width="24" Source="/vis10.png" Grid.Column="1" Visibility="Hidden"/>
+                <Image x:Name="vis9" HorizontalAlignment="Left" Height="27" Margin="141,180,0,0" VerticalAlignment="Top" Width="26" Source="/vis11.png" Grid.Column="1" Visibility="Hidden"/>
+            </Canvas>
+            <Canvas x:Name="canvas" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Image x:Name="fer1" Height="278" Canvas.Left="18" Canvas.Top="114" Width="278" Source="/fer1.gif" Visibility="Hidden"/>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="CategoryGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
+            <Button x:Name="b1" Content="Флора" HorizontalAlignment="Left" Margin="440,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b2" Content="Школа" HorizontalAlignment="Left" Margin="374,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b3" Content="Фауна" HorizontalAlignment="Left" Margin="310,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b4" Content="Техника" HorizontalAlignment="Left" Margin="230,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b0" Content="Любая" HorizontalAlignment="Left" Margin="164,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+        </Grid>
     </Grid>
 </Window>
