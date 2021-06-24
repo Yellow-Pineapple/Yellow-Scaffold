@@ -27,14 +27,17 @@ namespace Scaffold
         int vis;
         int points;
         int hit = 0;
-        bool[] guess = new bool[20];
+        bool hint;
+        int hint_counter;
+        int[] randomarray;
+
         public MainWindow()
         {
             InitializeComponent();
             RandomWord();
         }
 
-        public void RandomWord() 
+        public void RandomWord()
         {
 
             Random r = new Random();
@@ -42,6 +45,7 @@ namespace Scaffold
             word = (string)Application.Current.FindResource(Convert.ToString(random));
             TextBox.Text = new string('*', word.Length);
             points = 0;
+            hint = true;
         }
 
         public void Scaff_Imgs_Appear(int number)
@@ -67,7 +71,7 @@ namespace Scaffold
         {
             return str.Remove(index, 1).Insert(index, newSymb.ToString());
         }
-       
+
         public bool Check_letter(char key)  // Проверка буквы в слове
         {
             bool flag = false;
@@ -80,7 +84,6 @@ namespace Scaffold
                     string TextBoxText = TextBox.Text;
                     if (p != -1)    // Буква в слове присутствует
                     {
-                        guess[p] = true;
                         TextBox.Text = ReplaceCharInString(TextBoxText, p, key);
                         flag = true;
                         hit++;
@@ -105,8 +108,9 @@ namespace Scaffold
             return check;
         }
 
-        private void Button_Click_ShowPic(object sender, RoutedEventArgs e)    // Буква А
+        private void Button_Click_ShowPic(object sender, RoutedEventArgs e)
         {
+            //int miss = 0;
             Image img = new Image();
             img.Margin = ((Button)sender).Margin;
             ((Button)sender).IsEnabled = false;
@@ -157,27 +161,56 @@ namespace Scaffold
             {
                 button.IsEnabled = true;
             }
-            for (int i=0; i<guess.Length; i++)
-            {
-                guess[i] = false;
-            }
         }
 
         private void Settings(object sender, RoutedEventArgs e)
         {
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private int[] Shuffle(int limit)
         {
-            int l = word.Length;
-            Random letter = new Random();
-            int random = letter.Next(0, word.Length);
-            while (guess[random] == true)
+            int[] array = new int[limit];
+            for (int i = 0; i < limit; i++) array[i] = i;
+            var r = new Random();
+            for (int i = 0; i < limit; i++)
             {
-                random = letter.Next(0, word.Length);
+                int j = r.Next(limit);
+                int buffer = array[i];
+                array[i] = array[j];
+                array[j] = buffer;
             }
-            // Проверка, что весь массив трушный, чтобы не зависала прога
-            Check_letter(word[random]);
+            return array;
+        }
+
+        private void Get_Hint_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (hint)
+            {
+                randomarray = Shuffle(word.Length);
+                hint = false;
+                hint_counter = 0;
+            }
+
+            int Letter_Position = randomarray[hint_counter];
+            hint_counter++;
+            char Letter = word[Letter_Position];
+            Loop(Letter, Letter_Position);
+        }
+
+        private void Loop(char Letter, int Letter_Position)
+        {
+            var buttons = MainGrid.Children.OfType<Button>().ToList();
+
+            foreach (var button in buttons)
+            {
+                if (((string)button.Content).Contains(Letter, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (TextBox.Text[Letter_Position] == '*') Button_Click_ShowPic(button, null);
+                    return;
+                }
+            }
         }
     }
 }
