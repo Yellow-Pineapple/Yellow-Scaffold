@@ -36,13 +36,9 @@ namespace Scaffold
         public MainWindow()
         {
             InitializeComponent();
-            MainGrid.Visibility = Visibility.Hidden;
+            MainGrid.Visibility = Visibility.Hidden;        
+            //In_Coin();
             
-            In_Coin();
-            
-
-
-
         }
 
         private void RandomWord(object sender, RoutedEventArgs e)
@@ -51,15 +47,10 @@ namespace Scaffold
             CategoryGrid.Visibility = Visibility.Hidden;
             int letters_count = 1;
             Button button = (Button)sender;
-            int k = (int)button.Name[1];
+            string f = Convert.ToString(button.Name[1]);
+            int k = Convert.ToInt32(f);
             Random rand = new Random();
-            if (k == 0)
-            {               
-                k = rand.Next(1, 4);
-            }
-
-
-            
+            if (k == 0) k = rand.Next(1, 4);
 
             var myRD = new ResourceDictionary();
             switch (k)
@@ -91,17 +82,12 @@ namespace Scaffold
             }
 
             k = rand.Next(1, letters_count);
-
-            //word = (string)Application.Current.FindResource(Convert.ToString(random));
             word = myRD[k.ToString()].ToString();
 
             TextBox.Text = new string('*', word.Length);
             points = 0;
             hint = true;
 
-            //Random r = new Random();
-            //int random = r.Next(1, 9);
-            //word = (string)Application.Current.FindResource(Convert.ToString(random));
             MainGrid.Visibility = Visibility.Visible;
         }
 
@@ -210,7 +196,6 @@ namespace Scaffold
         {
             vis = 0;
             hit = 0;
-            RandomWord(null,null);
             Out_Coin();
             Scaff_Imgs_Disappear();
             var images = canvas.Children.OfType<Image>().ToList();
@@ -285,21 +270,21 @@ namespace Scaffold
                 }
             }
         }
-        public void In_Coin()
-        {
-            StreamReader f;
-            try
-            {
-                f = new StreamReader("coin.txt");
-            }
-            catch (Exception p)
-            {
-                MessageBox.Show("Возникла непредвиденная ошибка!");
-                return;
-            }
-            coin = int.Parse(f.ReadLine());
-            f.Close();
-        }
+        //public void In_Coin()
+        //{
+        //    StreamReader f;
+        //    try
+        //    {
+        //        f = new StreamReader("coin.txt");
+        //    }
+        //    catch (Exception p)
+        //    {
+        //        MessageBox.Show("Возникла непредвиденная ошибка!");
+        //        return;
+        //    }
+        //    coin = int.Parse(f.ReadLine());
+        //    f.Close();
+        //}
         public void Out_Coin()
         {
             StreamWriter f;

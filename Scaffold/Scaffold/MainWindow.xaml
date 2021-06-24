@@ -66,8 +66,8 @@
         <Grid x:Name="CategoryGrid"  OpacityMask="Black" Margin="0,0,0,0" Height="450">
             <Button x:Name="b1" Content="Флора" HorizontalAlignment="Left" Margin="440,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
             <Button x:Name="b2" Content="Школа" HorizontalAlignment="Left" Margin="374,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
-            <Button x:Name="b3" Content="Фауна" HorizontalAlignment="Left" Margin="310,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
-            <Button x:Name="b4" Content="Техника" HorizontalAlignment="Left" Margin="230,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b4" Content="Фауна" HorizontalAlignment="Left" Margin="310,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
+            <Button x:Name="b3" Content="Техника" HorizontalAlignment="Left" Margin="230,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
             <Button x:Name="b0" Content="Любая" HorizontalAlignment="Left" Margin="164,89,0,0" VerticalAlignment="Top" Click="RandomWord"/>
         </Grid>
     </Grid>
