@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1.jpg" />
+    <None Remove="11111.jpg" />
     <None Remove="1112.png" />
     <None Remove="1113.png" />
     <None Remove="1114.jpg" />
+    <None Remove="2.jpg" />
+    <None Remove="3.jpg" />
+    <None Remove="4.jpg" />
+    <None Remove="5.png" />
     <None Remove="fer1.gif" />
     <None Remove="gratis-png-arte-de-flecha-gris-diagrama-de-flecha-circular-redondo.png" />
     <None Remove="icon.ico" />
@@ -29,9 +35,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="1.jpg" />
+    <Resource Include="11111.jpg" />
     <Resource Include="1112.png" />
     <Resource Include="1113.png" />
     <Resource Include="1114.jpg" />
+    <Resource Include="2.jpg" />
+    <Resource Include="3.jpg" />
+    <Resource Include="4.jpg" />
+    <Resource Include="5.png" />
     <Resource Include="fer1.gif" />
     <Resource Include="icon.png" />
     <Resource Include="vis1.png" />
