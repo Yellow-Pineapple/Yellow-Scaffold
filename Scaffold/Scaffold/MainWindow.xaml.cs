@@ -27,6 +27,7 @@ namespace Scaffold
         int vis;
         int points;
         int hit = 0;
+        bool[] guess = new bool[20];
         public MainWindow()
         {
             InitializeComponent();
@@ -79,6 +80,7 @@ namespace Scaffold
                     string TextBoxText = TextBox.Text;
                     if (p != -1)    // Буква в слове присутствует
                     {
+                        guess[p] = true;
                         TextBox.Text = ReplaceCharInString(TextBoxText, p, key);
                         flag = true;
                         hit++;
@@ -105,7 +107,6 @@ namespace Scaffold
 
         private void Button_Click_ShowPic(object sender, RoutedEventArgs e)    // Буква А
         {
-            //int miss = 0;
             Image img = new Image();
             img.Margin = ((Button)sender).Margin;
             ((Button)sender).IsEnabled = false;
@@ -156,11 +157,27 @@ namespace Scaffold
             {
                 button.IsEnabled = true;
             }
+            for (int i=0; i<guess.Length; i++)
+            {
+                guess[i] = false;
+            }
         }
 
         private void Settings(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int l = word.Length;
+            Random letter = new Random();
+            int random = letter.Next(0, word.Length);
+            while (guess[random] == true)
+            {
+                random = letter.Next(0, word.Length);
+            }
+            // Проверка, что весь массив трушный, чтобы не зависала прога
+            Check_letter(word[random]);
         }
     }
 }

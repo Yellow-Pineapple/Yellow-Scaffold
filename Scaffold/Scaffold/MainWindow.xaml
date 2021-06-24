@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="/1114.jpg" TileMode="None" Opacity="0.303"/>
         </Grid.Background>
         <TextBlock x:Name="TextBox" HorizontalAlignment="Left" Margin="75,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="542" Height="66" FontSize="48" TextAlignment="Center" Grid.ColumnSpan="2"/>
-        <Button Content="А" HorizontalAlignment="Left" Margin="240,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
+        <Button Name="A" Content="А" HorizontalAlignment="Left" Margin="240,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
         <Button Content="Б" HorizontalAlignment="Left" Margin="280,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
         <Button Content="В" HorizontalAlignment="Left" Margin="320,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
         <Button Content="Г" HorizontalAlignment="Left" Margin="360,180,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Click="Button_Click_ShowPic"/>
@@ -44,7 +44,7 @@
         <Button Content="Э" HorizontalAlignment="Left" Margin="560,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
         <Button Content="Ю" HorizontalAlignment="Left" Margin="600,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
         <Button Content="Я" HorizontalAlignment="Left" Margin="640,260,0,0" VerticalAlignment="Top"  Width="28" FontSize="22" FontFamily="Times New Roman" Height="28" Grid.Column="1" Click="Button_Click_ShowPic"/>
-
+        <Button x:Name="Hint__b" Content="Подсказка" Canvas.Left="360" Canvas.Top="359" Height="32" Width="98" Click="Button_Click_ShowPic"/> 
         <Button Content="⚙" Grid.Column="1" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontSize="28" FontFamily="Times New Roman" Click="Settings"/>
         <Button Content="⭮" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="39" Height="39" FontFamily="Times New Roman" FontSize="36"  Click="Restart"/>
         <Canvas x:Name="canvas_vis" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -61,6 +61,7 @@
         </Canvas>
         <Canvas x:Name="canvas" Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image x:Name="fer1" Height="278" Canvas.Left="18" Canvas.Top="114" Width="278" Source="/fer1.gif" Visibility="Hidden"/>
+            
         </Canvas>
     </Grid>
 </Window>
