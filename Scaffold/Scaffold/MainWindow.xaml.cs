@@ -26,6 +26,7 @@ namespace Scaffold
         string word;
         int vis;
         int points;
+        int hit = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -80,6 +81,7 @@ namespace Scaffold
                     {
                         TextBox.Text = ReplaceCharInString(TextBoxText, p, key);
                         flag = true;
+                        hit++;
                     }
                 } while (p != -1);
             }
@@ -103,6 +105,7 @@ namespace Scaffold
 
         private void Button_Click_ShowPic(object sender, RoutedEventArgs e)    // Буква А
         {
+            //int miss = 0;
             Image img = new Image();
             img.Margin = ((Button)sender).Margin;
             ((Button)sender).IsEnabled = false;
@@ -119,7 +122,7 @@ namespace Scaffold
             }
             canvas.Children.Add(img);
             if (vis == 10) Game_Over_Message();
-            if (points == word.Length) Win_Message();
+            if (hit == word.Length) Win_Message();
         }
 
         private void Game_Over_Message()
@@ -139,6 +142,8 @@ namespace Scaffold
         private void Restart(object sender, RoutedEventArgs e)
         {
             vis = 0;
+            hit = 0;
+            fer1.Visibility = Visibility.Hidden;
             RandomWord();
             Scaff_Imgs_Disappear();
             var images = canvas.Children.OfType<Image>().ToList();
