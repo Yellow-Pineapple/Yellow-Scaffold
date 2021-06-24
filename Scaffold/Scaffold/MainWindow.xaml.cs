@@ -37,7 +37,7 @@ namespace Scaffold
         {
             InitializeComponent();
             MainGrid.Visibility = Visibility.Hidden;        
-            //In_Coin();
+            In_Coin();
             
         }
 
