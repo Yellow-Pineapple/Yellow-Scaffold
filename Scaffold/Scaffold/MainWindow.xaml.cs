@@ -180,14 +180,14 @@ namespace Scaffold
 
         private void Game_Over_Message()
         {
-            MessageBoxResult messageDialog = MessageBox.Show("Game Over! The word was: " + word + "\nWant to play some more?", ":(", MessageBoxButton.YesNo);
+            MessageBoxResult messageDialog = MessageBox.Show("Вы проиграли!\nЗагаданное слово: " + word + "\nХотите сыграть еще?", ":(", MessageBoxButton.YesNo);
             if (messageDialog == MessageBoxResult.No) Environment.Exit(0);
             if (messageDialog == MessageBoxResult.Yes) Restart(null, null);
         }
 
         private void Win_Message()
         {
-            MessageBoxResult messageDialog = MessageBox.Show("You win! The amount of your points is: " + points + "\nWant to play some more?", ":)", MessageBoxButton.YesNo);
+            MessageBoxResult messageDialog = MessageBox.Show("Вы выиграли!\nВаш капитал: " + coin + " coins\nХотите сыграть еще?", ":)", MessageBoxButton.YesNo);
             if (messageDialog == MessageBoxResult.No) Environment.Exit(0);
             if (messageDialog == MessageBoxResult.Yes) Restart(null, null);
         }
@@ -270,21 +270,21 @@ namespace Scaffold
                 }
             }
         }
-        //public void In_Coin()
-        //{
-        //    StreamReader f;
-        //    try
-        //    {
-        //        f = new StreamReader("coin.txt");
-        //    }
-        //    catch (Exception p)
-        //    {
-        //        MessageBox.Show("Возникла непредвиденная ошибка!");
-        //        return;
-        //    }
-        //    coin = int.Parse(f.ReadLine());
-        //    f.Close();
-        //}
+        public void In_Coin()
+        {
+            StreamReader f;
+            try
+            {
+                f = new StreamReader("coin.txt");
+            }
+            catch (Exception p)
+            {
+                MessageBox.Show("Возникла непредвиденная ошибка!");
+                return;
+            }
+            coin = int.Parse(f.ReadLine());
+            f.Close();
+        }
         public void Out_Coin()
         {
             StreamWriter f;
@@ -300,5 +300,6 @@ namespace Scaffold
             f.WriteLine(coin);
             f.Close();
         }
+
     }
 }
