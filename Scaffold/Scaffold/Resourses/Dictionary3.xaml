@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="1">техника</v:String>
+    <v:String x:Key="2">ноутбук</v:String>
+    <v:String x:Key="3">телевизор</v:String>
+    <v:String x:Key="4">микроволновка</v:String>
+    <v:String x:Key="5">пылесос</v:String>
+    <v:String x:Key="6">телефон</v:String>
+    <v:String x:Key="7">смартфон</v:String>
+    <v:String x:Key="8">микрофон</v:String>
+    <v:String x:Key="9">диктофон</v:String>
+    <v:String x:Key="10">часы</v:String>
+    <v:String x:Key="11">наушники</v:String>
+    <v:String x:Key="12">компьютер</v:String>
+    <v:String x:Key="13">клавиатура</v:String>
+    <v:String x:Key="14">колонка</v:String>
+    <v:String x:Key="15">фен</v:String>
+    <v:String x:Key="16">приставка</v:String>
+    <v:String x:Key="17">роутер</v:String>
+    <v:String x:Key="18">холодильник</v:String>
+    <v:String x:Key="19">духовка</v:String>
+    <v:String x:Key="20">вентелятор</v:String>
+    <v:String x:Key="21">утюг</v:String>
+    <v:String x:Key="22">отпарыватель</v:String>
+    <v:String x:Key="23">радио</v:String>
+    <v:String x:Key="24">мышь</v:String>
+    <v:String x:Key="25">пульт</v:String>
+    <v:String x:Key="26">принтер</v:String>
+    <v:String x:Key="27">сканер</v:String>
+    <v:String x:Key="28">пейджер</v:String>
+    <v:String x:Key="29">проектор</v:String>
+    <v:String x:Key="30">металлоискатель</v:String>
+    <v:String x:Key="31">удлинитель</v:String>
+    <v:String x:Key="32">фотоаппарат</v:String>
+    <v:String x:Key="33">видеокамера</v:String>
+    <v:String x:Key="34">планшет</v:String>
+    <v:String x:Key="35">камера</v:String>
+    <v:String x:Key="36">навигатор</v:String>
+</ResourceDictionary>
+    

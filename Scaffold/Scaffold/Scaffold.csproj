@@ -10,6 +10,7 @@
     <None Remove="1112.png" />
     <None Remove="1113.png" />
     <None Remove="1114.jpg" />
+    <None Remove="fer1.gif" />
     <None Remove="gratis-png-arte-de-flecha-gris-diagrama-de-flecha-circular-redondo.png" />
     <None Remove="icon.ico" />
     <None Remove="icon.png" />
@@ -31,6 +32,7 @@
     <Resource Include="1112.png" />
     <Resource Include="1113.png" />
     <Resource Include="1114.jpg" />
+    <Resource Include="fer1.gif" />
     <Resource Include="icon.png" />
     <Resource Include="vis1.png" />
     <Resource Include="vis10.png" />

@@ -25,19 +25,23 @@ namespace Scaffold
     {
         string word;
         int vis;
+        int points;
+        int hit = 0;
+        bool[] guess = new bool[20];
         public MainWindow()
         {
             InitializeComponent();
             RandomWord();
-
         }
 
-        public void RandomWord()
+        public void RandomWord() 
         {
+
             Random r = new Random();
             int random = r.Next(1, 9);
             word = (string)Application.Current.FindResource(Convert.ToString(random));
             TextBox.Text = new string('*', word.Length);
+            points = 0;
         }
 
         public void Scaff_Imgs_Appear(int number)
@@ -76,8 +80,10 @@ namespace Scaffold
                     string TextBoxText = TextBox.Text;
                     if (p != -1)    // Буква в слове присутствует
                     {
+                        guess[p] = true;
                         TextBox.Text = ReplaceCharInString(TextBoxText, p, key);
                         flag = true;
+                        hit++;
                     }
                 } while (p != -1);
             }
@@ -88,6 +94,7 @@ namespace Scaffold
             }
             return flag;
         }
+
         public bool Transform(object sender)
         {
             bool check;
@@ -106,25 +113,38 @@ namespace Scaffold
             img.Height = img.Width = 30;
             if (Transform(sender))
             {
-                img.Source = new BitmapImage(new Uri("/1112.png", UriKind.Relative));              
-            }    
+                img.Source = new BitmapImage(new Uri("/1112.png", UriKind.Relative));
+                points++;
+            }
             else
             {
                 img.Source = new BitmapImage(new Uri("/1113.png", UriKind.Relative));
+                points--;
             }
             canvas.Children.Add(img);
-            if (vis == 10)
-            {
-                MessageBoxResult messageDialog = MessageBox.Show("Game Over!\nWant to play some more?", ":(", MessageBoxButton.YesNo);
-                if (messageDialog == MessageBoxResult.No)
-                    Environment.Exit(0);
-                if (messageDialog == MessageBoxResult.Yes)
-                    Restart(null, null);
-            }
+            if (vis == 10) Game_Over_Message();
+            if (hit == word.Length) Win_Message();
         }
+
+        private void Game_Over_Message()
+        {
+            MessageBoxResult messageDialog = MessageBox.Show("Game Over! The word was: " + word + "\nWant to play some more?", ":(", MessageBoxButton.YesNo);
+            if (messageDialog == MessageBoxResult.No) Environment.Exit(0);
+            if (messageDialog == MessageBoxResult.Yes) Restart(null, null);
+        }
+
+        private void Win_Message()
+        {
+            MessageBoxResult messageDialog = MessageBox.Show("You win! The amount of your points is: " + points + "\nWant to play some more?", ":)", MessageBoxButton.YesNo);
+            if (messageDialog == MessageBoxResult.No) Environment.Exit(0);
+            if (messageDialog == MessageBoxResult.Yes) Restart(null, null);
+        }
+
         private void Restart(object sender, RoutedEventArgs e)
         {
             vis = 0;
+            hit = 0;
+            fer1.Visibility = Visibility.Hidden;
             RandomWord();
             Scaff_Imgs_Disappear();
             var images = canvas.Children.OfType<Image>().ToList();
@@ -132,11 +152,32 @@ namespace Scaffold
             {
                 canvas.Children.Remove(image);
             }
+            var buttons = MainGrid.Children.OfType<Button>().ToList();
+            foreach (var button in buttons)
+            {
+                button.IsEnabled = true;
+            }
+            for (int i=0; i<guess.Length; i++)
+            {
+                guess[i] = false;
+            }
         }
 
         private void Settings(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int l = word.Length;
+            Random letter = new Random();
+            int random = letter.Next(0, word.Length);
+            while (guess[random] == true)
+            {
+                random = letter.Next(0, word.Length);
+            }
+            // Проверка, что весь массив трушный, чтобы не зависала прога
+            Check_letter(word[random]);
         }
     }
 }

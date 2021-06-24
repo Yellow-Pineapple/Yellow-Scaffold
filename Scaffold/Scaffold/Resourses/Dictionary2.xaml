@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="1">школа</v:String>
+    <v:String x:Key="2">парта</v:String>
+    <v:String x:Key="3">математика</v:String>
+    <v:String x:Key="4">физика</v:String>
+    <v:String x:Key="5">география</v:String>
+    <v:String x:Key="6">геометрия</v:String>
+    <v:String x:Key="7">тетрадь</v:String>
+    <v:String x:Key="8">карандаш</v:String>
+    <v:String x:Key="9">ручка</v:String>
+    <v:String x:Key="10">мел</v:String>
+    <v:String x:Key="11">доска</v:String>
+    <v:String x:Key="12">учитель</v:String>
+    <v:String x:Key="13">школьник</v:String>
+    <v:String x:Key="14">транспортир</v:String>
+    <v:String x:Key="15">циркуль</v:String>
+    <v:String x:Key="16">альбом</v:String>
+    <v:String x:Key="17">краски</v:String>
+    <v:String x:Key="18">магнит</v:String>
+    <v:String x:Key="19">звонок</v:String>
+    <v:String x:Key="20">первоклассник</v:String>
+    <v:String x:Key="21">одноклассник</v:String>
+    <v:String x:Key="22">перемена</v:String>
+    <v:String x:Key="23">столовая</v:String>
+    <v:String x:Key="24">выпускник</v:String>
+    <v:String x:Key="25">выпускной</v:String>
+    <v:String x:Key="26">учебник</v:String>
+    <v:String x:Key="27">книга</v:String>
+    <v:String x:Key="28">рюкзак</v:String>
+    <v:String x:Key="29">сумка</v:String>
+    <v:String x:Key="30">расписание</v:String>
+    <v:String x:Key="31">диктант</v:String>
+    <v:String x:Key="32">экзамен</v:String>
+</ResourceDictionary>
