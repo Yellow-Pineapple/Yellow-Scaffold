@@ -173,6 +173,7 @@ namespace Scaffold
             if (hit == word.Length)
             {
                 coin++;
+                text_coins.Text = coin.ToString();
                 Out_Coin();
                 Win_Message();               
             }
@@ -249,6 +250,7 @@ namespace Scaffold
                 Loop(Letter, Letter_Position);
 
                 coin -= 5;
+                text_coins.Text = coin.ToString();
                 Out_Coin();
             } 
             else
@@ -283,6 +285,7 @@ namespace Scaffold
                 return;
             }
             coin = int.Parse(f.ReadLine());
+            text_coins.Text = coin.ToString();
             f.Close();
         }
         public void Out_Coin()
@@ -297,6 +300,7 @@ namespace Scaffold
                 MessageBox.Show("Возникла непредвиденная ошибка!");
                 return;
             }
+            text_coins.Text = coin.ToString();
             f.WriteLine(coin);
             f.Close();
         }
