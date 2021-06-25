@@ -10,4 +10,4 @@
 Черкасов Николай - Developer.</p>
 
 [Наш Trello](https://trello.com/yellowscaffold)</p>
-[Версия 2.0](https://drive.google.com/file/d/1A-cG20rBSp13kxnaaxGBwIYc2BH5jDow/view?usp=sharing)</p>
+[Версия 2.0](https://drive.google.com/file/d/16i1AG9pkIThWt45CRono07sa4w46hPZ3/view?usp=sharing)</p>
